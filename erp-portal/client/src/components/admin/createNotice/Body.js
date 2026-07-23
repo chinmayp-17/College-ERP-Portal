@@ -1,9 +1,7 @@
+import { Wrench } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import EngineeringIcon from "@mui/icons-material/Engineering";
 import { useDispatch, useSelector } from "react-redux";
 import { createNotice } from "../../../redux/actions/adminActions";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
 import Spinner from "../../../utils/Spinner";
 import * as classes from "../../../utils/styles";
 import { CREATE_NOTICE, SET_ERRORS } from "../../../redux/actionTypes";
@@ -62,7 +60,7 @@ const Body = () => {
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
         <div className="flex text-gray-400 items-center space-x-2">
-          <EngineeringIcon />
+          <Wrench />
           <h1>Create Notice</h1>
         </div>
         <div className=" mr-10 bg-white flex flex-col rounded-xl ">
@@ -101,20 +99,20 @@ const Body = () => {
 
                 <div className={classes.adminForm3}>
                   <h1 className={classes.adminLabel}>To :</h1>
-                  <Select
+                  <select
                     required
-                    displayEmpty
-                    sx={{ height: 36 }}
-                    inputProps={{ "aria-label": "Without label" }}
+                    
+                    
+                    
                     value={value.noticeFor}
-                    onChange={(e) =>
+                    className={classes.adminInput} onChange={(e) =>
                       setValue({ ...value, noticeFor: e.target.value })
                     }>
-                    <MenuItem value="">None</MenuItem>
-                    <MenuItem value="all">All</MenuItem>
-                    <MenuItem value="faculty">Faculty</MenuItem>
-                    <MenuItem value="student">Student</MenuItem>
-                  </Select>
+                    <option value="">None</option>
+                    <option value="all">All</option>
+                    <option value="faculty">Faculty</option>
+                    <option value="student">Student</option>
+                  </select>
                 </div>
                 <div className={classes.adminForm3}>
                   <h1 className={classes.adminLabel}>From :</h1>

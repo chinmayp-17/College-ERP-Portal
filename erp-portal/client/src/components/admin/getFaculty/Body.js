@@ -1,11 +1,9 @@
+import { Wrench } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import EngineeringIcon from "@mui/icons-material/Engineering";
 import { useDispatch, useSelector } from "react-redux";
 import { getFaculty } from "../../../redux/actions/adminActions";
-import Select from "@mui/material/Select";
 import Spinner from "../../../utils/Spinner";
 import * as classes from "../../../utils/styles";
-import MenuItem from "@mui/material/MenuItem";
 import { SET_ERRORS } from "../../../redux/actionTypes";
 const Body = () => {
   const dispatch = useDispatch();
@@ -46,7 +44,7 @@ const Body = () => {
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
         <div className="flex text-gray-400 items-center space-x-2">
-          <EngineeringIcon />
+          <Wrench />
           <h1>All Faculty</h1>
         </div>
         <div className=" mr-10 bg-white grid grid-cols-4 rounded-xl pt-6 pl-6 h-[29.5rem]">
@@ -54,20 +52,20 @@ const Body = () => {
             className="flex flex-col space-y-2 col-span-1"
             onSubmit={handleSubmit}>
             <label htmlFor="department">Department</label>
-            <Select
+            <select
               required
-              displayEmpty
-              sx={{ height: 36, width: 224 }}
-              inputProps={{ "aria-label": "Without label" }}
+              
+              
+              
               value={department}
-              onChange={(e) => setDepartment(e.target.value)}>
-              <MenuItem value="">None</MenuItem>
+              className={classes.adminInput} onChange={(e) => setDepartment(e.target.value)}>
+              <option value="">None</option>
               {departments?.map((dp, idx) => (
-                <MenuItem key={idx} value={dp.department}>
+                <option key={idx} value={dp.department}>
                   {dp.department}
-                </MenuItem>
+                </option>
               ))}
-            </Select>
+            </select>
             <button
               className={`${classes.adminFormSubmitButton} w-56`}
               type="submit">

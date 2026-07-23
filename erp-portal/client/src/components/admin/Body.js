@@ -1,15 +1,10 @@
+import { Home, Wrench, User, Users, BookOpen, CornerUpLeft } from "lucide-react";
 import React, { useState } from "react";
-import HomeIcon from "@mui/icons-material/Home";
 import Calendar from "react-calendar";
-import EngineeringIcon from "@mui/icons-material/Engineering";
-import BoyIcon from "@mui/icons-material/Boy";
-import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
 import "react-calendar/dist/Calendar.css";
 import { useSelector } from "react-redux";
 import Notice from "../notices/Notice";
 import ShowNotice from "../notices/ShowNotice";
-import ReplyIcon from "@mui/icons-material/Reply";
 const Body = () => {
   const [open, setOpen] = useState(false);
   const [openNotice, setOpenNotice] = useState({});
@@ -24,13 +19,13 @@ const Body = () => {
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
         <div className="flex text-gray-400 items-center space-x-2">
-          <HomeIcon />
+          <Home />
           <h1>Dashboard</h1>
         </div>
         <div className="flex flex-col mr-5 space-y-4 overflow-y-hidden">
           <div className="bg-white h-[8rem] rounded-xl shadow-lg grid grid-cols-4 justify-between px-8 items-center space-x-4">
             <div className="flex items-center space-x-4 border-r-2">
-              <EngineeringIcon
+              <Wrench
                 className="rounded-full py-2 bg-orange-300"
                 sx={{ fontSize: 40 }}
               />
@@ -40,7 +35,7 @@ const Body = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4 border-r-2">
-              <BoyIcon
+              <User
                 className="rounded-full py-2 bg-orange-300"
                 sx={{ fontSize: 40 }}
               />
@@ -50,7 +45,7 @@ const Body = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4 border-r-2">
-              <SupervisorAccountIcon
+              <Users
                 className="rounded-full py-2 bg-orange-300"
                 sx={{ fontSize: 40 }}
               />
@@ -60,7 +55,7 @@ const Body = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4 ">
-              <MenuBookIcon
+              <BookOpen
                 className="rounded-full py-2 bg-orange-300"
                 sx={{ fontSize: 40 }}
               />
@@ -79,7 +74,7 @@ const Body = () => {
             <div className="bg-white h-[17rem] w-full rounded-xl shadow-lg flex flex-col  pt-3">
               <div className="flex px-3">
                 {open && (
-                  <ReplyIcon
+                  <CornerUpLeft
                     onClick={() => setOpen(false)}
                     className="cursor-pointer"
                   />

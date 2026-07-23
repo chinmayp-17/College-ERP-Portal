@@ -1,7 +1,5 @@
+import { Contact, Shield } from "lucide-react";
 import React from "react";
-import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
-import SecurityUpdateIcon from "@mui/icons-material/SecurityUpdate";
-import { Avatar } from "@mui/material";
 import Data from "./Data";
 import { useNavigate } from "react-router-dom";
 const Body = () => {
@@ -12,19 +10,19 @@ const Body = () => {
       <div className="space-y-5">
         <div className="flex  items-center justify-between mr-8">
           <div className="flex space-x-2 text-gray-400">
-            <AssignmentIndIcon />
+            <Contact />
             <h1>Profile</h1>
           </div>
           <div
             onClick={() => navigate("/admin/update")}
             className="flex space-x-2 cursor-pointer">
-            <SecurityUpdateIcon />
+            <Shield />
             <h1 className="font-bold">Update</h1>
           </div>
         </div>
         <div className="w-[98%] bg-white relative rounded-xl ">
           <div className="absolute left-[50%] top-[-10%]">
-            <Avatar src={user.result.avatar} sx={{ width: 70, height: 70 }} />
+            <img src={user.result.avatar} className="w-10 h-10 rounded-full object-cover" />
           </div>
           <div className="flex py-10 ml-10 space-x-40">
             <div className="flex flex-col space-y-10">

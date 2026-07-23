@@ -1,8 +1,7 @@
+import { User } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import BoyIcon from "@mui/icons-material/Boy";
 import { useDispatch, useSelector } from "react-redux";
 import { getStudent, uploadMark } from "../../../redux/actions/facultyActions";
-import { MenuItem, Select } from "@mui/material";
 import Spinner from "../../../utils/Spinner";
 import * as classes from "../../../utils/styles";
 import { MARKS_UPLOADED, SET_ERRORS } from "../../../redux/actionTypes";
@@ -93,7 +92,7 @@ const Body = () => {
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
         <div className="flex text-gray-400 items-center space-x-2">
-          <BoyIcon />
+          <User />
           <h1>All Students</h1>
         </div>
         <div className=" mr-10 bg-white grid grid-cols-4 rounded-xl pt-6 pl-6 h-[29.5rem]">
@@ -101,47 +100,47 @@ const Body = () => {
             className="flex flex-col space-y-2 col-span-1"
             onSubmit={handleSubmit}>
             <label htmlFor="year">Year</label>
-            <Select
+            <select
               required
-              displayEmpty
-              sx={{ height: 36, width: 224 }}
-              inputProps={{ "aria-label": "Without label" }}
+              
+              
+              
               value={value.year}
-              onChange={(e) => setValue({ ...value, year: e.target.value })}>
-              <MenuItem value="">None</MenuItem>
-              <MenuItem value="1">1</MenuItem>
-              <MenuItem value="2">2</MenuItem>
-              <MenuItem value="3">3</MenuItem>
-              <MenuItem value="4">4</MenuItem>
-            </Select>
+              className={classes.adminInput} onChange={(e) => setValue({ ...value, year: e.target.value })}>
+              <option value="">None</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
             <label htmlFor="section">Section</label>
-            <Select
+            <select
               required
-              displayEmpty
-              sx={{ height: 36, width: 224 }}
-              inputProps={{ "aria-label": "Without label" }}
+              
+              
+              
               value={value.section}
-              onChange={(e) => setValue({ ...value, section: e.target.value })}>
-              <MenuItem value="">None</MenuItem>
-              <MenuItem value="1">1</MenuItem>
-              <MenuItem value="2">2</MenuItem>
-              <MenuItem value="3">3</MenuItem>
-            </Select>
+              className={classes.adminInput} onChange={(e) => setValue({ ...value, section: e.target.value })}>
+              <option value="">None</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
             <label htmlFor="year">Test</label>
-            <Select
+            <select
               required
-              displayEmpty
-              sx={{ height: 36, width: 224 }}
-              inputProps={{ "aria-label": "Without label" }}
+              
+              
+              
               value={value.test}
-              onChange={(e) => setValue({ ...value, test: e.target.value })}>
-              <MenuItem value="">None</MenuItem>
+              className={classes.adminInput} onChange={(e) => setValue({ ...value, test: e.target.value })}>
+              <option value="">None</option>
               {tests?.map((test, idx) => (
-                <MenuItem value={test.test} key={idx}>
+                <option value={test.test} key={idx}>
                   {test.test}
-                </MenuItem>
+                </option>
               ))}
-            </Select>
+            </select>
             <button
               className={`${classes.adminFormSubmitButton} w-56`}
               type="submit">

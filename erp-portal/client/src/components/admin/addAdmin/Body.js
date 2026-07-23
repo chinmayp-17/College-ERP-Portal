@@ -1,10 +1,8 @@
+import { Wrench } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import EngineeringIcon from "@mui/icons-material/Engineering";
 import { useDispatch, useSelector } from "react-redux";
 import FileBase from "react-file-base64";
 import { addAdmin } from "../../../redux/actions/adminActions";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
 import Spinner from "../../../utils/Spinner";
 import * as classes from "../../../utils/styles";
 import { ADD_ADMIN, SET_ERRORS } from "../../../redux/actionTypes";
@@ -69,7 +67,7 @@ const Body = () => {
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
         <div className="flex text-gray-400 items-center space-x-2">
-          <EngineeringIcon />
+          <Wrench />
           <h1>Add Admin</h1>
         </div>
         <div className=" mr-10 bg-white flex flex-col rounded-xl ">
@@ -123,22 +121,22 @@ const Body = () => {
               <div className={classes.adminForm2r}>
                 <div className={classes.adminForm3}>
                   <h1 className={classes.adminLabel}>Department :</h1>
-                  <Select
+                  <select
                     required
-                    displayEmpty
-                    sx={{ height: 36 }}
-                    inputProps={{ "aria-label": "Without label" }}
+                    
+                    
+                    
                     value={value.department}
-                    onChange={(e) =>
+                    className={classes.adminInput} onChange={(e) =>
                       setValue({ ...value, department: e.target.value })
                     }>
-                    <MenuItem value="">None</MenuItem>
+                    <option value="">None</option>
                     {departments?.map((dp, idx) => (
-                      <MenuItem key={idx} value={dp.department}>
+                      <option key={idx} value={dp.department}>
                         {dp.department}
-                      </MenuItem>
+                      </option>
                     ))}
-                  </Select>
+                  </select>
                 </div>
                 <div className={classes.adminForm3}>
                   <h1 className={classes.adminLabel}>Contact Number :</h1>

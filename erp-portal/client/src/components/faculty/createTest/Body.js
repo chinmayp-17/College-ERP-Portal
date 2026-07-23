@@ -1,9 +1,7 @@
+import { Plus } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import AddIcon from "@mui/icons-material/Add";
 import { useDispatch, useSelector } from "react-redux";
 import { createTest } from "../../../redux/actions/facultyActions";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
 import Spinner from "../../../utils/Spinner";
 import { ADD_TEST, SET_ERRORS } from "../../../redux/actionTypes";
 import * as classes from "../../../utils/styles";
@@ -75,7 +73,7 @@ const Body = () => {
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
         <div className="flex text-gray-400 items-center space-x-2">
-          <AddIcon />
+          <Plus />
           <h1>Create Test</h1>
         </div>
         <div className=" mr-10 bg-white flex flex-col rounded-xl ">
@@ -126,21 +124,21 @@ const Body = () => {
                 </div>
                 <div className={classes.adminForm3}>
                   <h1 className={classes.adminLabel}>Year :</h1>
-                  <Select
+                  <select
                     required
-                    displayEmpty
-                    sx={{ height: 36 }}
-                    inputProps={{ "aria-label": "Without label" }}
+                    
+                    
+                    
                     value={value.year}
-                    onChange={(e) =>
+                    className={classes.adminInput} onChange={(e) =>
                       setValue({ ...value, year: e.target.value })
                     }>
-                    <MenuItem value="">None</MenuItem>
-                    <MenuItem value="1">1</MenuItem>
-                    <MenuItem value="2">2</MenuItem>
-                    <MenuItem value="3">3</MenuItem>
-                    <MenuItem value="4">4</MenuItem>
-                  </Select>
+                    <option value="">None</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
                 </div>
               </div>
               <div className={classes.adminForm2r}>
@@ -173,20 +171,20 @@ const Body = () => {
                 </div>
                 <div className={classes.adminForm3}>
                   <h1 className={classes.adminLabel}>Section :</h1>
-                  <Select
+                  <select
                     required
-                    displayEmpty
-                    sx={{ height: 36 }}
-                    inputProps={{ "aria-label": "Without label" }}
+                    
+                    
+                    
                     value={value.section}
-                    onChange={(e) =>
+                    className={classes.adminInput} onChange={(e) =>
                       setValue({ ...value, section: e.target.value })
                     }>
-                    <MenuItem value="">None</MenuItem>
-                    <MenuItem value="1">1</MenuItem>
-                    <MenuItem value="2">2</MenuItem>
-                    <MenuItem value="3">3</MenuItem>
-                  </Select>
+                    <option value="">None</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
                 </div>
               </div>
             </div>

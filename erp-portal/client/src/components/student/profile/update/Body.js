@@ -1,11 +1,9 @@
+import { Shield, EyeOff } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import SecurityUpdateIcon from "@mui/icons-material/SecurityUpdate";
 import FileBase from "react-file-base64";
 import { useDispatch, useSelector } from "react-redux";
 import { updateStudent } from "../../../../redux/actions/studentActions";
-import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useNavigate } from "react-router-dom";
-import { MenuItem, Select } from "@mui/material";
 import Spinner from "../../../../utils/Spinner";
 import { SET_ERRORS } from "../../../../redux/actionTypes";
 import * as classes from "../../../../utils/styles";
@@ -81,14 +79,14 @@ const Body = () => {
       <div className="space-y-5">
         <div className="flex  items-center justify-between mr-8">
           <div className="flex space-x-2 text-gray-400">
-            <SecurityUpdateIcon />
+            <Shield />
             <h1>Update</h1>
           </div>
 
           <div
             onClick={() => navigate("/student/update/password")}
             className="flex space-x-2 cursor-pointer">
-            <VisibilityOffIcon />
+            <EyeOff />
             <h1 className="font-bold">Password</h1>
           </div>
         </div>
@@ -173,21 +171,21 @@ const Body = () => {
               <div className={classes.adminForm2r}>
                 <div className={classes.adminForm3}>
                   <h1 className={classes.adminLabel}>Department :</h1>
-                  <Select
-                    displayEmpty
-                    sx={{ height: 36 }}
-                    inputProps={{ "aria-label": "Without label" }}
+                  <select
+                    
+                    
+                    
                     value={value.department}
-                    onChange={(e) =>
+                    className={classes.adminInput} onChange={(e) =>
                       setValue({ ...value, department: e.target.value })
                     }>
-                    <MenuItem value="">None</MenuItem>
+                    <option value="">None</option>
                     {departments?.map((dp, idx) => (
-                      <MenuItem key={idx} value={dp.department}>
+                      <option key={idx} value={dp.department}>
                         {dp.department}
-                      </MenuItem>
+                      </option>
                     ))}
-                  </Select>
+                  </select>
                 </div>
 
                 <div className={classes.adminForm3}>

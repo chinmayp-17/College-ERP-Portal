@@ -1,8 +1,7 @@
+import { Eye, EyeOff } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import Spinner from "../../../utils/Spinner";
 import { studentSignIn } from "../../../redux/actions/studentActions";
 
@@ -89,12 +88,12 @@ const StudentLogin = () => {
                 placeholder="Password"
               />
               {showPassword ? (
-                <VisibilityIcon
+                <Eye
                   onClick={() => setShowPassword(!showPassword)}
                   className="cursor-pointer"
                 />
               ) : (
-                <VisibilityOffIcon
+                <EyeOff
                   onClick={() => setShowPassword(!showPassword)}
                   className="cursor-pointer"
                 />

@@ -1,5 +1,5 @@
+import { Plus } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import AddIcon from "@mui/icons-material/Add";
 import { useDispatch, useSelector } from "react-redux";
 import { addDepartment } from "../../../redux/actions/adminActions";
 import Spinner from "../../../utils/Spinner";
@@ -46,7 +46,7 @@ const Body = () => {
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
         <div className="flex text-gray-400 items-center space-x-2">
-          <AddIcon />
+          <Plus />
           <h1>Add Subject</h1>
         </div>
         <div className=" mr-10 bg-white flex flex-col rounded-xl ">

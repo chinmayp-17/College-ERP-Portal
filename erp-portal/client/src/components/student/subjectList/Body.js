@@ -1,8 +1,7 @@
+import { BookOpen } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { useDispatch, useSelector } from "react-redux";
 import { getSubject } from "../../../redux/actions/adminActions";
-import { MenuItem, Select } from "@mui/material";
 import Spinner from "../../../utils/Spinner";
 import { SET_ERRORS } from "../../../redux/actionTypes";
 import * as classes from "../../../utils/styles";
@@ -46,7 +45,7 @@ const Body = () => {
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
         <div className="flex text-gray-400 items-center space-x-2">
-          <MenuBookIcon />
+          <BookOpen />
           <h1>All Subjects</h1>
         </div>
         <div className=" mr-10 bg-white rounded-xl pt-6 pl-6 h-[29.5rem]">

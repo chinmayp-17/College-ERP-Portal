@@ -1,6 +1,5 @@
+import { LogOut } from "lucide-react";
 import React from "react";
-import { Avatar } from "@mui/material";
-import LogoutIcon from "@mui/icons-material/Logout";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 const Header = () => {
@@ -23,14 +22,9 @@ const Header = () => {
       </div>
       <h1 className="font-semibold text-black">Welcome</h1>
       <div className="flex items-center space-x-3">
-        <Avatar
-          src={user.result.avatar}
-          alt={user.result.name.charAt(0)}
-          sx={{ width: 24, height: 24 }}
-          className="border-blue-600 border-2"
-        />
+        <img src={user.result.avatar} alt={user.result.name.charAt(0)} className="w-8 h-8 rounded-full border-blue-600 border-2 object-cover" />
         <h1>{user.result.name.split(" ")[0]}</h1>
-        <LogoutIcon
+        <LogOut
           onClick={logout}
           className="cursor-pointer hover:scale-125 transition-all "
         />

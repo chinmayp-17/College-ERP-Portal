@@ -1,15 +1,8 @@
+import { Home, Contact, Wrench, Plus, User, Trash, BookOpen } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import HomeIcon from "@mui/icons-material/Home";
-import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
-import EngineeringIcon from "@mui/icons-material/Engineering";
-import AddIcon from "@mui/icons-material/Add";
-import BoyIcon from "@mui/icons-material/Boy";
-import DeleteIcon from "@mui/icons-material/Delete";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { useDispatch } from "react-redux";
 import decode from "jwt-decode";
-import { setRef } from "@mui/material";
 const isNotActiveStyle =
   "flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize hover:bg-gray-200 py-2 my-1";
 const isActiveStyle =
@@ -51,7 +44,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <HomeIcon className="" />
+            <Home className="" />
             <h1 className="font-normal">Dashboard</h1>
           </NavLink>
           <NavLink
@@ -59,7 +52,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <AssignmentIndIcon className="" />
+            <Contact className="" />
             <h1 className="font-normal">Profile</h1>
           </NavLink>
         </div>
@@ -69,7 +62,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <AddIcon className="" />
+            <Plus className="" />
             <h1 className="font-normal">Create Notice</h1>
           </NavLink>
         </div>
@@ -79,7 +72,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <AddIcon className="" />
+            <Plus className="" />
             <h1 className="font-normal">Add Admin</h1>
           </NavLink>
           <NavLink
@@ -87,7 +80,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <DeleteIcon className="" />
+            <Trash className="" />
             <h1 className="font-normal">Delete Admin</h1>
           </NavLink>
         </div>
@@ -97,7 +90,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <AddIcon className="" />
+            <Plus className="" />
             <h1 className="font-normal">Add Department</h1>
           </NavLink>
           <NavLink
@@ -105,7 +98,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <DeleteIcon className="" />
+            <Trash className="" />
             <h1 className="font-normal">Delete Department</h1>
           </NavLink>
         </div>
@@ -115,7 +108,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <EngineeringIcon className="" />
+            <Wrench className="" />
             <h1 className="font-normal">Our Faculty</h1>
           </NavLink>
 
@@ -124,7 +117,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <AddIcon className="" />
+            <Plus className="" />
             <h1 className="font-normal">Add Faculty</h1>
           </NavLink>
           <NavLink
@@ -132,7 +125,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <DeleteIcon className="" />
+            <Trash className="" />
             <h1 className="font-normal">Delete Faculty</h1>
           </NavLink>
         </div>
@@ -142,7 +135,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <BoyIcon className="" />
+            <User className="" />
             <h1 className="font-normal">Our Students</h1>
           </NavLink>
 
@@ -151,7 +144,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <AddIcon className="" />
+            <Plus className="" />
             <h1 className="font-normal">Add Students</h1>
           </NavLink>
           <NavLink
@@ -159,7 +152,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <DeleteIcon className="" />
+            <Trash className="" />
             <h1 className="font-normal">Delete Student</h1>
           </NavLink>
         </div>
@@ -169,7 +162,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <MenuBookIcon className="" />
+            <BookOpen className="" />
             <h1 className="font-normal">Subjects</h1>
           </NavLink>
 
@@ -178,7 +171,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <AddIcon className="" />
+            <Plus className="" />
             <h1 className="font-normal">Add Subject</h1>
           </NavLink>
           <NavLink
@@ -186,7 +179,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <DeleteIcon className="" />
+            <Trash className="" />
             <h1 className="font-normal">Delete Subject</h1>
           </NavLink>
         </div>

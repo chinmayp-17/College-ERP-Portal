@@ -1,9 +1,6 @@
+import { Home, Contact, Wrench, Plus } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import HomeIcon from "@mui/icons-material/Home";
-import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
-import EngineeringIcon from "@mui/icons-material/Engineering";
-import AddIcon from "@mui/icons-material/Add";
 import { useDispatch } from "react-redux";
 import decode from "jwt-decode";
 const isNotActiveStyle =
@@ -39,7 +36,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <HomeIcon className="" />
+            <Home className="" />
             <h1 className="font-normal">Dashboard</h1>
           </NavLink>
           <NavLink
@@ -47,7 +44,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <AssignmentIndIcon className="" />
+            <Contact className="" />
             <h1 className="font-normal">Profile</h1>
           </NavLink>
         </div>
@@ -57,7 +54,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <AddIcon className="" />
+            <Plus className="" />
             <h1 className="font-normal">Test results</h1>
           </NavLink>
           <NavLink
@@ -65,7 +62,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <AddIcon className="" />
+            <Plus className="" />
             <h1 className="font-normal">Attendance</h1>
           </NavLink>
         </div>
@@ -75,7 +72,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }>
-            <EngineeringIcon className="" />
+            <Wrench className="" />
             <h1 className="font-normal">Subject List</h1>
           </NavLink>
         </div>

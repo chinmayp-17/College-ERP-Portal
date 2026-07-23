@@ -1,6 +1,5 @@
+import { Eye, EyeOff } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import Spinner from "../../../../../utils/Spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -64,12 +63,12 @@ const Body = () => {
               placeholder="New Password"
             />
             {showPassword ? (
-              <VisibilityOffIcon
+              <EyeOff
                 onClick={() => setShowPassword(!showPassword)}
                 className="cursor-pointer"
               />
             ) : (
-              <VisibilityIcon
+              <Eye
                 onClick={() => setShowPassword(!showPassword)}
                 className="cursor-pointer"
               />
@@ -88,12 +87,12 @@ const Body = () => {
               placeholder="Confirm Password"
             />
             {showPassword ? (
-              <VisibilityOffIcon
+              <EyeOff
                 onClick={() => setShowPassword(!showPassword)}
                 className="cursor-pointer"
               />
             ) : (
-              <VisibilityIcon
+              <Eye
                 onClick={() => setShowPassword(!showPassword)}
                 className="cursor-pointer"
               />
