@@ -13,7 +13,7 @@ export const adminFormClearButton =
   "bg-gray-400 w-28 h-10 rounded-lg text-white font-semibold shadow-md hover:-translate-y-1 hover:bg-gray-500 hover:shadow-lg transition-all duration-200";
 export const adminFormButton = "flex justify-center space-x-6 mt-8";
 
-export const adminForm0 = "flex flex-col mb-6 bg-white/70 backdrop-blur-xl shadow-2xl rounded-3xl p-8 border border-white/40";
+export const adminForm0 = "flex flex-col mb-6 bg-white/70 backdrop-blur-xl shadow-2xl rounded-3xl p-8 border border-white/40 overflow-y-auto max-h-[70vh] scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-300";
 export const adminForm1 = "flex flex-col md:flex-row py-4 space-y-8 md:space-y-0 md:space-x-12";
 export const adminForm2l = "flex flex-col space-y-6 w-full";
 export const adminForm2r = "flex flex-col space-y-6 w-full";
