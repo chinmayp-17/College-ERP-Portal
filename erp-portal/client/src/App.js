@@ -6,7 +6,9 @@ import AddFaculty from "./components/admin/addFaculty/AddFaculty";
 import AddStudent from "./components/admin/addStudent/AddStudent";
 import AddSubject from "./components/admin/addSubject/AddSubject";
 import AdminHome from "./components/admin/AdminHome";
-
+import AdminLayout from "./components/admin/AdminLayout";
+import FacultyLayout from "./components/faculty/FacultyLayout";
+import StudentLayout from "./components/student/StudentLayout";
 import GetFaculty from "./components/admin/getFaculty/GetFaculty";
 import GetStudent from "./components/admin/getStudent/GetStudent";
 import GetSubject from "./components/admin/getSubject/GetSubject";
@@ -49,54 +51,54 @@ const App = () => {
       <Route exact path="/" element={<Login />} />
 
       {/* Admin  */}
-
       <Route path="/login/adminlogin" element={<AdminLogin />} />
-      <Route path="/admin/home" element={<AdminHome />} />
-      <Route path="/admin/profile" element={<AdminProfile />} />
-      <Route path="/admin/update" element={<AdminUpdate />} />
-      <Route path="/admin/update/password" element={<AdminPassword />} />
-      <Route
-        path="/admin/updatepassword"
-        element={<AdminFirstTimePassword />}
-      />
-      <Route path="/admin/createnotice" element={<CreateNotice />} />
-      <Route path="/admin/addadmin" element={<AddAdmin />} />
-      <Route path="/admin/deleteadmin" element={<DeleteAdmin />} />
-      <Route path="/admin/adddepartment" element={<AddDepartment />} />
-      <Route path="/admin/deletedepartment" element={<DeleteDepartment />} />
-      <Route path="/admin/addfaculty" element={<AddFaculty />} />
-      <Route path="/admin/deletefaculty" element={<DeleteFaculty />} />
-      <Route path="/admin/deletestudent" element={<DeleteStudent />} />
-      <Route path="/admin/deletesubject" element={<DeleteSubject />} />
-      <Route path="/admin/allfaculty" element={<GetFaculty />} />
-      <Route path="/admin/addstudent" element={<AddStudent />} />
-      <Route path="/admin/addsubject" element={<AddSubject />} />
-      <Route path="/admin/allsubject" element={<GetSubject />} />
-      <Route path="/admin/allstudent" element={<GetStudent />} />
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route path="home" element={<AdminHome />} />
+        <Route path="profile" element={<AdminProfile />} />
+        <Route path="update" element={<AdminUpdate />} />
+        <Route path="update/password" element={<AdminPassword />} />
+        <Route path="updatepassword" element={<AdminFirstTimePassword />} />
+        <Route path="createnotice" element={<CreateNotice />} />
+        <Route path="addadmin" element={<AddAdmin />} />
+        <Route path="deleteadmin" element={<DeleteAdmin />} />
+        <Route path="adddepartment" element={<AddDepartment />} />
+        <Route path="deletedepartment" element={<DeleteDepartment />} />
+        <Route path="addfaculty" element={<AddFaculty />} />
+        <Route path="deletefaculty" element={<DeleteFaculty />} />
+        <Route path="deletestudent" element={<DeleteStudent />} />
+        <Route path="deletesubject" element={<DeleteSubject />} />
+        <Route path="allfaculty" element={<GetFaculty />} />
+        <Route path="addstudent" element={<AddStudent />} />
+        <Route path="addsubject" element={<AddSubject />} />
+        <Route path="allsubject" element={<GetSubject />} />
+        <Route path="allstudent" element={<GetStudent />} />
+      </Route>
 
       {/* Faculty  */}
-
       <Route path="/login/facultylogin" element={<FacultyLogin />} />
-      <Route path="/faculty/home" element={<FacultyHome />} />
-      <Route path="/faculty/password" element={<FacultyFirstTimePassword />} />
-      <Route path="/faculty/profile" element={<FacultyProfile />} />
-      <Route path="/faculty/update" element={<FacultyUpdate />} />
-      <Route path="/faculty/update/password" element={<FacultyPassword />} />
-      <Route path="/faculty/createtest" element={<CreateTest />} />
-      <Route path="/faculty/uploadmarks" element={<UploadMarks />} />
-      <Route path="/faculty/markattendance" element={<MarkAttendance />} />
+      <Route path="/faculty" element={<FacultyLayout />}>
+        <Route path="home" element={<FacultyHome />} />
+        <Route path="password" element={<FacultyFirstTimePassword />} />
+        <Route path="profile" element={<FacultyProfile />} />
+        <Route path="update" element={<FacultyUpdate />} />
+        <Route path="update/password" element={<FacultyPassword />} />
+        <Route path="createtest" element={<CreateTest />} />
+        <Route path="uploadmarks" element={<UploadMarks />} />
+        <Route path="markattendance" element={<MarkAttendance />} />
+      </Route>
 
       {/* Student  */}
-
       <Route path="/login/studentlogin" element={<StudentLogin />} />
-      <Route path="/student/home" element={<StudentHome />} />
-      <Route path="/student/password" element={<StudentFirstTimePassword />} />
-      <Route path="/student/profile" element={<StudentProfile />} />
-      <Route path="/student/update" element={<StudentUpdate />} />
-      <Route path="/student/update/password" element={<StudentPassword />} />
-      <Route path="/student/subjectlist" element={<SubjectList />} />
-      <Route path="/student/testresult" element={<TestResult />} />
-      <Route path="/student/attendance" element={<Attendance />} />
+      <Route path="/student" element={<StudentLayout />}>
+        <Route path="home" element={<StudentHome />} />
+        <Route path="password" element={<StudentFirstTimePassword />} />
+        <Route path="profile" element={<StudentProfile />} />
+        <Route path="update" element={<StudentUpdate />} />
+        <Route path="update/password" element={<StudentPassword />} />
+        <Route path="subjectlist" element={<SubjectList />} />
+        <Route path="testresult" element={<TestResult />} />
+        <Route path="attendance" element={<Attendance />} />
+      </Route>
     </Routes>
   );
 };
