@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: erp-portal-backend
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: PORT
+        value: 5001
+      - key: CONNECTION_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
